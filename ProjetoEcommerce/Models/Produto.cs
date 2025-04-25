@@ -7,6 +7,6 @@
         public string? Descricao { get; set; }
         public int? Quantidade { get; set; }
         public decimal? Preco { get; set; }
-        public List<Produto> ListarProduto { get; set; }
+        public List<Produto>? ListaProduto { get; set; }
     }
 }
