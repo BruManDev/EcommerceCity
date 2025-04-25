@@ -20,8 +20,8 @@ namespace ProjetoEcommerce.Repositorio
                 cmd.Parameters.Add("@codprod", MySqlDbType.Int32).Value = produto.CodProd;
                 cmd.Parameters.Add("@nome", MySqlDbType.VarChar).Value = produto.Nome;
                 cmd.Parameters.Add("@descricao", MySqlDbType.VarChar).Value = produto.Descricao;
-                cmd.Parameters.Add("@quantidade", MySqlDbType.Int32).Value = produto.quantidade;
-                cmd.Parameters.Add("@preco", MySqlDbType.Decimal).Value = produto.preco;
+                cmd.Parameters.Add("@quantidade", MySqlDbType.Int32).Value = produto.Quantidade;
+                cmd.Parameters.Add("@preco", MySqlDbType.Decimal).Value = produto.Preco;
                 cmd.ExecuteNonQuery();
                 conexao.Close();
             }
@@ -40,8 +40,8 @@ namespace ProjetoEcommerce.Repositorio
                     cmd.Parameters.Add("@codprod", MySqlDbType.Int32).Value = produto.CodProd;
                     cmd.Parameters.Add("@nome", MySqlDbType.VarChar).Value = produto.Nome;
                     cmd.Parameters.Add("@descricao", MySqlDbType.VarChar).Value = produto.Descricao;
-                    cmd.Parameters.Add("@quantidade", MySqlDbType.Int32).Value = produto.quantidade;
-                    cmd.Parameters.Add("@preco", MySqlDbType.Decimal).Value = produto.preco;
+                    cmd.Parameters.Add("@quantidade", MySqlDbType.Int32).Value = produto.Quantidade;
+                    cmd.Parameters.Add("@preco", MySqlDbType.Decimal).Value = produto.Preco;
                     int linhasAfetadas = cmd.ExecuteNonQuery();
                     return linhasAfetadas > 0;
                 }
@@ -76,8 +76,8 @@ namespace ProjetoEcommerce.Repositorio
                             CodProd = Convert.ToInt32(dr["CodProd"]),
                             Nome = ((string)dr["Nome"]),
                             Descricao = ((string)dr["Descricao"]),
-                            quantidade = Convert.ToInt32(dr["quantidade"]),
-                            preco = ((decimal)dr["preco"]),
+                            Quantidade = Convert.ToInt32(dr["quantidade"]),
+                            Preco = ((decimal)dr["preco"]),
                         });
                 }
                 return ProdutoList;
@@ -102,8 +102,8 @@ namespace ProjetoEcommerce.Repositorio
                     produto.CodProd = Convert.ToInt32(dr["CodProd"]);
                     produto.Nome = (string)(dr["Nome"]);
                     produto.Descricao = (string)(dr["Descricao"]);
-                    produto.quantidade = Convert.ToInt32(dr["quantidade"]);
-                    produto.preco = (decimal)(dr["preco"]);
+                    produto.Quantidade = Convert.ToInt32(dr["quantidade"]);
+                    produto.Preco = (decimal)(dr["preco"]);
                 }
                 return produto;
             }
