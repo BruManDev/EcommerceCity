@@ -18,13 +18,13 @@ CREATE TABLE Cliente(
 
 CREATE TABLE Produto(
 	CodProd int primary key auto_increment,
-    Nome varchar(50) not null,
+	Nome varchar(50) not null,
     Descricao varchar(100) not null,
     Quantidade int not null,
-    Preco decimal (10,2) not null
+    Preco decimal(10,2) not null
 );
 
-insert into Usuario (Nome, Email, Senha) values ('Bruno', 'bruno123@gmail.com', 2393);
+insert into Usuario (Nome, Email, Senha) values ('Bruno', 'bruno2393@gmail.com', 2393);
 
 SELECT * FROM Produto;
 SELECT * FROM Usuario;
