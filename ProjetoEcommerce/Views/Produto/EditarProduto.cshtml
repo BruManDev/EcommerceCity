@@ -7,10 +7,7 @@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="EditarProduto" method="post">
-            @*Esse token desempenha um papel crucial na prevenção de ataques de Cross-Site Request Forgery (CSRF).
-            Um ataque CSRF ocorre quando um site malicioso, um e-mail, um programa de mensagens 
-            instantâneas ou um programa induz um navegador da web de um usuário conectado a um aplicativo da web a executar uma 
-            ação indesejada naquele aplicativo. Isso pode acontecer sem o conhecimento ou consentimento do usuário.*@
+            
             @Html.AntiForgeryToken()
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 

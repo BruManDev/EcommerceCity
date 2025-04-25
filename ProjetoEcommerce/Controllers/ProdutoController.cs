@@ -47,7 +47,7 @@ namespace ProjetoEcommerce.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public IActionResult EditarProduto(int id, [Bind("CodProd,Nome,Descricao,quantidade,preco")] Produto produto)
+        public IActionResult EditarProduto(int id, [Bind("CodProd,Nome,Descricao,Quantidade,Preco")] Produto produto)
         {
             if (id != produto.CodProd)
             {
@@ -66,17 +66,17 @@ namespace ProjetoEcommerce.Controllers
                 catch (Exception)
                 {
                     ModelState.AddModelError("", "Ocorreu um erro ao Editar");
+                    return View(produto);
                 }
             }
 
-            // Garante que sempre há um retorno
             return View(produto);
         }
 
 
         public IActionResult ExcluirProduto(int id)
         {
-            _produtoRepositorio.Excluir(id);
+            _produtoRepositorio.ExcluirProduto(id);
             return RedirectToAction(nameof(Index));
 
         }

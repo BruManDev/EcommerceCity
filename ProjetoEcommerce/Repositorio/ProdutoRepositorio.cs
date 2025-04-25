@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using ProjetoEcommerce.Models;
+using System.Configuration;
 using System.Data;
 
 
@@ -109,7 +110,7 @@ namespace ProjetoEcommerce.Repositorio
 
         }
 
-        public void Excluir(int id)
+        public void ExcluirProduto(int id)
         {
             using (var conexao = new MySqlConnection(_conexaoMySQL))
             {
