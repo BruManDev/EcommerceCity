@@ -1,6 +1,7 @@
 ﻿@model ProjetoEcommerce.Models.Cliente;
+<link href="~/css/CadastrarCli.css" rel="stylesheet" />
 
-<h1>Cadastrar Cliente</h1>
+<h1 class="title-cli">Cadastrar Cliente</h1>
 
 <h4>Cliente</h4>
 <hr />
@@ -12,17 +13,17 @@
             <div class="form-group">
                 <label asp-for="NomeCli" class="control-label"></label>
                 <input asp-for="NomeCli" class="form-control" />
-                <span asp-validation-for="NomeCli" class="text-danger"></span>
+                <span asp-validation-for="NomeCliente" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="TelCli" class="control-label"></label>
-                <input asp-for="TelCli" class="form-control" />
+                <input asp-for="TelCliente" class="form-control" />
                 <span asp-validation-for="TelCli" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="EmailCli" class="control-label"></label>
+                <label asp-for="EmailCliente" class="control-label"></label>
                 <input asp-for="EmailCli" class="form-control" />
                 <span asp-validation-for="EmailCli" class="text-danger"></span>
             </div>
@@ -30,10 +31,12 @@
             <div class="form-group">
                 <input type="submit" value="Cadastrar" class="btn btn-primary" />
             </div>
+
+            <div class="form-group">
+                <a asp-action="Index" class="btn btn-success">Voltar</a>
+            </div>
+
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Voltar</a>
-</div>

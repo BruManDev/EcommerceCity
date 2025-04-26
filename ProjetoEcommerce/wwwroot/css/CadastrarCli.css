@@ -1,0 +1,48 @@
+﻿.title-cli {
+    color: #0c4e24;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.col-md-4 {
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #0c4e24;
+    border-radius: 20px;
+    background-image: linear-gradient( #0c4e24, #137838, #0c4e24);
+}
+
+.form-group {
+    display: inline;
+    margin-bottom: 1.5rem;
+    padding-top: 10px;
+}
+
+.btn-primary {
+    margin-top: 10px;
+    background: #159644;
+    border: 1px;
+}
+
+.btn-success {
+    margin-top: 10px;
+    background: #13c153;
+    border: 1px;
+}
+
+
+.btn-primary:hover {
+    color: #159644;
+    background: #fff;
+    border: 10px;
+    border-color: #d52946;
+}
+
+
+.btn-success:hover {
+    color: #13c153;
+    background: #fff;
+    border: 10px;
+    border-color: #000000;
+}
